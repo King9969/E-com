@@ -13,7 +13,7 @@ import {
   Filler,
 } from "chart.js";
 import {
-  Chart,
+  Bar,
   Line,
   Doughnut,
   getDatasetAtEvent,
@@ -33,24 +33,41 @@ ChartJS.register(
   Tooltip
 );
 
-export const options = {
-  scales: {
-    y: {
-      beginAtZero: true,
+const generateRandomData = () => {
+  return labels.map(() => Math.floor(Math.random() * 1000));
+};
+
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "top",
+    },
+    title: {
+      display: true,
+      text: "Chart.js Bar Chart",
     },
   },
 };
-export const labels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-];
+const labels = ["January", "February", "March", "April", "May", "June", "July"];
 
-export const data3 = {
+const data = {
+  labels,
+  datasets: [
+    {
+      label: "Dataset 1",
+      data: generateRandomData(),
+      backgroundColor: "rgb(17 24 39)",
+    },
+    {
+      label: "Dataset 2",
+      data: generateRandomData(),
+      backgroundColor: "rgb(	37, 99, 235)",
+    },
+  ],
+};
+
+const data3 = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   datasets: [
     {
@@ -77,7 +94,7 @@ export const data3 = {
   ],
 };
 
-export const data2 = {
+const data2 = {
   labels,
   datasets: [
     {
@@ -105,22 +122,14 @@ const options2 = {
 export default function Dashboard() {
   window.scrollTo(0, 0);
 
-  const chartRef = useRef(null);
-
-  const onClick = (event) => {
-    const { current: chart } = chartRef;
-
-    if (!chart) {
-      return;
-    }
-  };
-
   return (
     <>
       <div className=" p-24 max-md:p-0 max-md:py-28 overflow-hidden">
         <Intro />
         <div className="  lg:flex">
-          <div className="lg:w-full"></div>
+          <div className="lg:w-full">
+            <Bar options={options} data={data} />
+          </div>
           <div className="px-8  m-4">
             <Transaction />
           </div>
