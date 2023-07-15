@@ -13,7 +13,6 @@ import {
   Filler,
 } from "chart.js";
 import {
-  bar,
   Chart,
   Line,
   Doughnut,
@@ -27,7 +26,6 @@ ChartJS.register(
   CategoryScale,
   ArcElement,
   BarElement,
-   Title,
   PointElement,
   LineElement,
   Legend,
@@ -79,33 +77,6 @@ export const data3 = {
   ],
 };
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      type: "line",
-      label: "Dataset 1",
-      borderColor: "rgb(255, 99, 132)",
-      borderWidth: 2,
-      fill: false,
-      data: labels.map(() => Math.random() * 1000),
-    },
-    {
-      type: "bar",
-      label: "Dataset 2",
-      backgroundColor: "rgb(	37, 99, 235)",
-      data: labels.map(() => Math.random() * 1000),
-      borderColor: "white",
-      borderWidth: 2,
-    },
-    {
-      type: "bar",
-      label: "Dataset 3",
-      backgroundColor: "rgb(17, 24, 39)",
-      data: labels.map(() => Math.random() * 1000),
-    },
-  ],
-};
 export const data2 = {
   labels,
   datasets: [
@@ -133,27 +104,6 @@ const options2 = {
 };
 export default function Dashboard() {
   window.scrollTo(0, 0);
-  const printDatasetAtEvent = (dataset) => {
-    if (!dataset.length) return;
-
-    const datasetIndex = dataset[0].datasetIndex;
-
-    console.log(data.datasets[datasetIndex].label);
-  };
-
-  const printElementAtEvent = (element) => {
-    if (!element.length) return;
-
-    const { datasetIndex, index } = element[0];
-
-    console.log(data.labels[index], data.datasets[datasetIndex].data[index]);
-  };
-
-  const printElementsAtEvent = (elements) => {
-    if (!elements.length) return;
-
-    console.log(elements.length);
-  };
 
   const chartRef = useRef(null);
 
@@ -163,10 +113,6 @@ export default function Dashboard() {
     if (!chart) {
       return;
     }
-
-    printDatasetAtEvent(getDatasetAtEvent(chart, event));
-    printElementAtEvent(getElementAtEvent(chart, event));
-    printElementsAtEvent(getElementsAtEvent(chart, event));
   };
 
   return (
@@ -174,15 +120,7 @@ export default function Dashboard() {
       <div className=" p-24 max-md:p-0 max-md:py-28 overflow-hidden">
         <Intro />
         <div className="  lg:flex">
-          <div className="lg:w-full">
-            <Chart
-              ref={chartRef}
-              type="bar"
-              onClick={onClick}
-              options={options}
-              data={data}
-            />
-          </div>
+          <div className="lg:w-full"></div>
           <div className="px-8  m-4">
             <Transaction />
           </div>
