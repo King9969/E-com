@@ -13,6 +13,7 @@ import {
   Filler,
 } from "chart.js";
 import {
+  bar,
   Chart,
   Line,
   Doughnut,
