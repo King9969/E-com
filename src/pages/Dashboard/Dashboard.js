@@ -27,6 +27,7 @@ ChartJS.register(
   CategoryScale,
   ArcElement,
   BarElement,
+   Title,
   PointElement,
   LineElement,
   Legend,
@@ -174,13 +175,7 @@ export default function Dashboard() {
         <Intro />
         <div className="  lg:flex">
           <div className="lg:w-full">
-            <Chart
-              ref={chartRef}
-              type="bar"
-              onClick={onClick}
-              options={options}
-              data={data}
-            />
+
           </div>
           <div className="px-8  m-4">
             <Transaction />
