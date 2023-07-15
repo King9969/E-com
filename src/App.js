@@ -29,7 +29,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<Item />} />
-          <Route path="/dashboard" element={<Product />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/checkout/:cost" element={<Checkout />} />
         </Routes>
 
