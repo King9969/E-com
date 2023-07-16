@@ -52,7 +52,7 @@ const Product = () => {
       </div>
       <div className="py-10 lg:px-40 md:px-6 px-4">
         {isLoading ? (
-<div className="w-20 h-20 border-l-2 border-[#1a5cff] rounded-full animate-spin" />
+<div className="w-full h-20 border-l-2 border-[#1a5cff] rounded-full animate-spin" />
         ) : (
           <>
             <div className="flex justify-between max-md:flex-col">
