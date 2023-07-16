@@ -52,7 +52,12 @@ const Product = () => {
       </div>
       <div className="py-10 lg:px-40 md:px-6 px-4">
         {isLoading ? (
-<div className="w-full h-20 border-l-2 border-[#1a5cff] rounded-full animate-spin" />
+          <div className="flex justify-center mx-auto w-8">
+            <div
+              className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+              role="status"
+            ></div>
+          </div>
         ) : (
           <>
             <div className="flex justify-between max-md:flex-col">
