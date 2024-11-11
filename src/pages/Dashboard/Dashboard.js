@@ -237,7 +237,7 @@ function Intro() {
     <div className="  font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-center text-gray-900">
       <div className="   px-4 pb-24 overflow-auto md:px-6">
         <h1 className="p-10 text-4xl font-semibold text-gray-800 ">
-          Welcome Back, Rohit
+          Welcome Back, User
         </h1>
 
         <div className="flex  flex-col items-center w-full my-6 space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
@@ -571,7 +571,7 @@ const Orders = () => {
                           </div>
                           <div className="ml-3">
                             <p className="text-gray-900 whitespace-no-wrap">
-                              Rohit Yadav
+                              User
                             </p>
                           </div>
                         </div>
