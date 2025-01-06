@@ -1,6 +1,6 @@
 #  React E-commerce Application
 
-![E-commerce Banner](https://ry4ecom.netlify.app/banner-image.png)
+https://ry4ecom.netlify.app/
 
 Welcome to **React E-commerce Application**, a modern and responsive web application built with React and Tailwind CSS. This project showcases a fully functional e-commerce platform with features like product listings, shopping cart, checkout process, and more. While authentication and database functionalities are omitted due to resource constraints, the app is designed to be easily integrated with APIs or databases using the provided JSON dummy data.
 
